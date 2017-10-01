@@ -5,8 +5,7 @@ import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `<p *ngFor='let user of (users$ | async)'>{{ user?.id }} {{ user?.login }}</p>`
 })
 
 export class AppComponent implements OnInit {
